@@ -4,7 +4,6 @@ How to run vpn server with [SoftEther](https://ja.softether.org/) on GCE.
 
 
 **This README is for me.**
-**I do not guarantee correctness.**
 
 ## Manual how to set config
 ```bash
