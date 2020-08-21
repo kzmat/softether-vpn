@@ -1,5 +1,7 @@
+variable "project_id" {}
+
 resource "google_compute_instance" "vpn" {
-  project      = "vpn-server-280302"
+  project      = "${var.project_id}"
   name         = "vpn"
   machine_type = "f1-micro"
   zone         = "asia-northeast1-a"

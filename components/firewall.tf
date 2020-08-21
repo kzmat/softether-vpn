@@ -1,5 +1,7 @@
+variable "project_id" {}
+
 resource "google_compute_firewall" "firewall" {
-  project      = "vpn-server-280302"
+  project      = "${var.project_id}"
   name    = "allow-vpn"
   network = "default"
   allow {

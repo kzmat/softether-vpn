@@ -6,7 +6,9 @@ Run vpn server with [SoftEther](https://ja.softether.org/) on GCE.
 ## Usage
 
 ```
+
 export GOOGLE_APPLICATION_CREDENTIALS={{path}}
+export TF_VAR_project_id={{PROJECT_ID}}
 
 # Build instance & firewall
 terraform plan
