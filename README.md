@@ -7,16 +7,17 @@ Run vpn server with [SoftEther](https://ja.softether.org/) on GCE.
 
 ```
 
-export GOOGLE_APPLICATION_CREDENTIALS={{path}}
-export TF_VAR_project_id={{PROJECT_ID}}
+$ export GOOGLE_APPLICATION_CREDENTIALS={{path}}
+$ export TF_VAR_project_id={{PROJECT_ID}}
 
-# Build instance & firewall
-terraform plan
-terraform apply
+# Create instance & firewall
+$ terraform init
+$ terraform plan
+$ terraform apply
 
-# run server
-sudo snap install docker
-sudo docker run -d \
+# Run server
+$ sudo snap install docker
+$ sudo docker run -d \
   --cap-add NET_ADMIN \
   -p 500:500/udp \
   -p 4500:4500/udp \
@@ -29,4 +30,3 @@ sudo docker run -d \
   -e HPW={{hubpassword}} \
   siomiz/softethervpn
 ```
-
