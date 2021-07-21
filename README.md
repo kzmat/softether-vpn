@@ -5,17 +5,20 @@ Run vpn server with [SoftEther](https://ja.softether.org/) on GCE.
 
 ## Usage
 
+
+1. Input tfvars
+    - project_id
+    - credential_file_path
+
+2. Create instance & firewall
 ```
-
-$ export GOOGLE_APPLICATION_CREDENTIALS={{path}}
-$ export TF_VAR_project_id={{PROJECT_ID}}
-
-# Create instance & firewall
 $ terraform init
 $ terraform plan
 $ terraform apply
+```
 
-# Run server
+3. Run server
+```
 $ sudo snap install docker
 $ sudo docker run -d \
   --cap-add NET_ADMIN \
